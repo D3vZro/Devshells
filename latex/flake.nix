@@ -24,7 +24,7 @@
 
       # Build dependencies
       inputsFrom = with pkgs; [
-        tesxliveFull
+        texliveFull
       ];
     };
   };
