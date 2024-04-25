@@ -12,6 +12,11 @@
       description = "A devshell for editing and compiling LaTeX documents";
     };
 
+    templates.scala = {
+      path = ./scala;
+      description = "A devshell for scala projects";
+    };
+
     defaultTemplate = self.templates.basic;
   };
 }
