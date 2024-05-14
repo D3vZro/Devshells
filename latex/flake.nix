@@ -3,7 +3,11 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs";
-    nixNeovim.url = "github:D3vZro/NixNeovim";
+
+    nixNeovim = {
+      url = "github:D3vZro/NixNeovim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixNeovim,... }:
