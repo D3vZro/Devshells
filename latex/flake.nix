@@ -24,10 +24,6 @@
         nvim
         pandoc
         texlab
-      ];
-
-      # Build dependencies
-      inputsFrom = with pkgs; [
         texliveFull
       ];
     };
