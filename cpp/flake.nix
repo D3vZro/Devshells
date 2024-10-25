@@ -23,15 +23,16 @@
           nvim
           fd
           ripgrep
+
+          cmake
+          clang-tools
+          ccache
+          spdlog
         ];
 
         # Build inputs
         inputsFrom = with pkgs; [
           gcc11
-          cmake
-          clang-tools
-          spdlog
-          ccache
           # llvmPackages.openmp
           # cudaPackages.cudatoolkit
         ];
