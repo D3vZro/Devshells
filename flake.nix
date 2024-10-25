@@ -17,6 +17,11 @@
       description = "A devshell for scala projects";
     };
 
+    templates.cpp = {
+      path = ./cpp;
+      description = "A devshell for C++ projects with OpenMP & CUDA";
+    };
+
     defaultTemplate = self.templates.basic;
   };
 }
