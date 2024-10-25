@@ -1,5 +1,5 @@
 {
-  description = "A basic devshell";
+  description = "A devshell for basic scala stuff";
 
   inputs = {
     nixpkgs.url = "nixpkgs";
