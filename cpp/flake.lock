@@ -201,11 +201,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1729283522,
-        "narHash": "sha256-BlERBLaQV0mSKY7RCYczVcegpfF4kfLL0Ce1N8rQUvY=",
+        "lastModified": 1729868115,
+        "narHash": "sha256-ZipNmz3bXHgmPAmrHcLCXYmqHhPHQrESIEHeK4d/XG0=",
         "owner": "D3vZro",
         "repo": "NixNeovim",
-        "rev": "f536dedc4b89927b241534dee129930ff9f3de75",
+        "rev": "9c6e6df07402bb0abd234b20d9797b8d64e282ba",
         "type": "github"
       },
       "original": {
@@ -261,8 +261,8 @@
     "nixpkgs_3": {
       "locked": {
         "lastModified": 0,
-        "narHash": "sha256-9UTxR8eukdg+XZeHgxW5hQA9fIKHsKCdOIUycTryeVw=",
-        "path": "/nix/store/60sn02zhawl3kwn0r515zff3h6hg6ydz-source",
+        "narHash": "sha256-AlcmCXJZPIlO5dmFzV3V2XF6x/OpNWUV8Y/FMPGd8Z4=",
+        "path": "/nix/store/lsy6c2f9alj2gkjj36h754kk63x6701l-source",
         "type": "path"
       },
       "original": {

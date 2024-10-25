@@ -1,5 +1,6 @@
 {
-  description = "A basic devshell";
+  description = "A specialized devshell for C++ projects, OpenMP and CUDA";
+  # Special thanks to Wölfchen <3
 
   inputs = {
     nixpkgs.url = "nixpkgs";
@@ -9,24 +10,39 @@
   outputs = { self, nixpkgs, nixNeovim,... }:
   let
     system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; };
-    nvim = nixNeovim.outputs.packages.${system}.nvim-cpp;
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    nvim = nixNeovim.outputs.packages.${system}.cpp;
   in {
-    devShells.${system}.default = pkgs.mkShell {
-      # Interactive packages
-      packages = with pkgs; [
-        ripgrep
-        fd
-        nvim
-      ];
+      # The override is used to get a clangd environment
+      devShells.${system}.default = pkgs.mkShell.override { stdenv = pkgs.clangStdenv; } {
+        # Executable packages
+        packages = with pkgs; [
+          nvim
+          fd
+          ripgrep
+        ];
 
-      # Build dependencies
-      inputsFrom = with pkgs; [
-        cmake
-        gcc11
-        clang-tools
-        ccache
-      ];
-    };
+        # Build inputs
+        inputsFrom = with pkgs; [
+          gcc11
+          cmake
+          clang-tools
+          spdlog
+          ccache
+          # llvmPackages.openmp
+          # cudaPackages.cudatoolkit
+        ];
+
+        # Environment variables and other stuff
+        shellHooks = ''
+          export CUDA_PATH=${pkgs.cudatoolkit}
+          export EXTRA_LDFLAGS="-L/lib -L${pkgs.linuxPackages.nvidia_x11}/lib"
+          export EXTRA_CCFLAGS="-I/usr/include"
+          export LD_LIBRARY_PATH="/run/opengl-driver/lib"
+        '';
+      };
   };
 }
