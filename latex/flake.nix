@@ -1,5 +1,5 @@
 {
-  description = "A basic devshell";
+  description = "A devshell to start out writing LaTeX documents";
 
   inputs = {
     nixpkgs.url = "nixpkgs";
