@@ -15,8 +15,6 @@
     devShells.${system}.default = pkgs.mkShell {
       # Interactive packages
       packages = with pkgs; [
-        ripgrep
-        fd
         nvim
       ];
 
