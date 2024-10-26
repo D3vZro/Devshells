@@ -21,9 +21,6 @@
         # Executable packages
         packages = with pkgs; [
           nvim
-          fd
-          ripgrep
-
           cmake
           clang-tools
           ccache
