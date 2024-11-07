@@ -14,7 +14,7 @@
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
-    nvim = nixNeovim.outputs.packages.${system}.nvim-latex;
+    nvim = nixNeovim.outputs.packages.${system}.latex;
   in {
     devShells.${system}.default = pkgs.mkShell {
       # Interactive packages
