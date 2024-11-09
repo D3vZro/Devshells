@@ -14,12 +14,17 @@
 
     templates.scala = {
       path = ./scala;
-      description = "A devshell for scala projects";
+      description = "A devshell for Scala projects";
     };
 
     templates.cpp = {
       path = ./cpp;
       description = "A devshell for C++ projects with OpenMP & CUDA";
+    };
+
+    templates.svelte = {
+      path = ./svelte;
+      description = "A devshell for Svelte & TailwindCSS";
     };
 
     defaultTemplate = self.templates.basic;
