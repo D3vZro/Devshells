@@ -25,10 +25,6 @@
           clang-tools
           ccache
           spdlog
-        ];
-
-        # Build inputs
-        inputsFrom = with pkgs; [
           gcc11
           # llvmPackages.openmp
           # cudaPackages.cudatoolkit
