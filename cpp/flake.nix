@@ -25,8 +25,10 @@
           clang-tools
           ccache
           spdlog
-          gcc11
-          # llvmPackages.openmp
+          gcc13
+          ffmpeg
+          python310
+          llvmPackages.openmp
           # cudaPackages.cudatoolkit
         ];
 
