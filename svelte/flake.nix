@@ -18,6 +18,7 @@
         nvim
         svelte-language-server
         tailwindcss-language-server
+        typescript-language-server
         nodejs
       ];
     };
