@@ -12,6 +12,11 @@
       description = "A devshell for editing and compiling LaTeX documents";
     };
 
+    templates.lean= {
+      path = ./lean;
+      description = "A devshell for Lean projects";
+    };
+
     templates.scala = {
       path = ./scala;
       description = "A devshell for Scala projects";
