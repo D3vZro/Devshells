@@ -32,6 +32,11 @@
       description = "A devshell for Svelte & TailwindCSS";
     };
 
+    templates.typst = {
+      path = ./typst ;
+      description = "A devshell for typst documents";
+    };
+
     defaultTemplate = self.templates.basic;
   };
 }
